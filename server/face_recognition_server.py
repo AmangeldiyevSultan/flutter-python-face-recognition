@@ -4,9 +4,6 @@ import websockets
 import json, io
 import face_recognition
 
-picture_of_me = face_recognition.load_image_file("me.png")
-known_face_encoding = face_recognition.face_encodings(picture_of_me)
-
 async def websocket_handler(websocket, path):
     try: 
         async for message in websocket:
